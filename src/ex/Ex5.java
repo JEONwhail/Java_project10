@@ -14,18 +14,17 @@ public class Ex5 {
 		System.out.println("3 : 우선순위가 높은 고객 먼저 할당 ");
 
 		Scanner scanner = new Scanner(System.in);
-		int num = scanner.nextInt(); // 문자를 입력받아서 num변수에 저장
+		int num = scanner.nextInt(); 
 
 		Scheduler scheduler = null;
 
-		// 입력받은 숫자에 따라서 정책을 선택함
-		if (num == 1) { // 입력받은 값이 1이면 RoundRobin 클래스 생성
+		if (num == 1) { 
 			scheduler = new RoundRobin();
 			
-		} else if (num == 2) { // 입력받은 값이 2이면 LeastJob 클래스 생성
+		} else if (num == 2) { 
 			scheduler = new LeastJob();
 			
-		} else if (num == 3) { // 입력받은 값이 3이면 PriorityAllocation 클래스 생성
+		} else if (num == 3) { 
 			scheduler = new PriorityAllocation();
 			
 		} else {
